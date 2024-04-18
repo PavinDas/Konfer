@@ -12,7 +12,20 @@
           "package_name": "com.example.konfer"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "523106200488-5v2raba3fm9h6gp2hk4gmchmfnqt974h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.konfer",
+            "certificate_hash": "cecf5972dec2808d7fec34f5d467e37a11ca8ad6"
+          }
+        },
+        {
+          "client_id": "523106200488-0b2t6ekhq2gpv8hifqke7thltihq4iko.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDTxqGAIBMwVgsUhZR7qc2WqC8zdM62i3s"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "523106200488-0b2t6ekhq2gpv8hifqke7thltihq4iko.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "523106200488-emtu3057c3eq2og46a83ran95a378qph.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.konfer"
+              }
+            }
+          ]
         }
       }
     }

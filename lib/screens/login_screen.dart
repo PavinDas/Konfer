@@ -12,7 +12,6 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-
   final AuthMethods _authMethods = AuthMethods();
   @override
   Widget build(BuildContext context) {
@@ -25,12 +24,17 @@ class _LoginScreenState extends State<LoginScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const SizedBox(height: 100,),
-            Text(appName,style: TextStyle(
-              fontFamily: bold,
-              fontSize: 50,
-              color: whiteColor
-            ),),
+            const SizedBox(
+              height: 100,
+            ),
+            const Text(
+              appName,
+              style: TextStyle(
+                fontFamily: bold,
+                fontSize: 50,
+                color: whiteColor,
+              ),
+            ),
             const Spacer(),
             const Text(
               'Start or join a meeting',
@@ -51,10 +55,15 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             const Spacer(),
             CustomButton(
-              onPressed: ()async{
-                bool res = await _authMethods.signInWithGoogle(context);
-                if(res){
-                  Navigator.pushNamed(context, '/home');
+              onPressed: () async {
+                bool res = await _authMethods.signInWithGoogle(
+                  context,
+                );
+                if (res) {
+                  Navigator.pushNamed(
+                    context,
+                    '/home',
+                  );
                 }
               },
               text: googleSign,

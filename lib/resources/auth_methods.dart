@@ -8,12 +8,17 @@ class AuthMethods {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
+
+  Stream<User?> get authChanges => _auth.authStateChanges();
+
   Future<bool> signInWithGoogle(BuildContext context) async {
     bool res = false;
     try {
       final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+
       final GoogleSignInAuthentication? googleAuth =
           await googleUser?.authentication;
+          
       final credential = GoogleAuthProvider.credential(
         accessToken: googleAuth?.accessToken,
         idToken: googleAuth?.idToken,
