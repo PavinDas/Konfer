@@ -18,51 +18,47 @@ class meetingButtons extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onPressed,
-      child: Padding(
-        padding: const EdgeInsets.all(
-          10,
-        ),
-        child: Column(
-          children: [
-            Container(
-              decoration: BoxDecoration(
-                color: secColor,
-                borderRadius: BorderRadius.circular(
-                  16,
-                ),
-                boxShadow: [
-                  BoxShadow(
-                    blurRadius: 10,
-                    color: blackColor.withOpacity(
-                      0.06,
-                    ),
-                    offset: const Offset(
-                      0,
-                      4,
-                    ),
+      child: Column(
+        children: [
+          const SizedBox(height: 10,),
+          Container(
+            decoration: BoxDecoration(
+              color: secColor,
+              borderRadius: BorderRadius.circular(
+                16,
+              ),
+              boxShadow: [
+                BoxShadow(
+                  blurRadius: 10,
+                  color: blackColor.withOpacity(
+                    0.06,
                   ),
-                ],
-              ),
-              width: 60,
-              height: 60,
-              child: Icon(
-                icon,
-                color: textColor,
-                size: 30,
-              ),
+                  offset: const Offset(
+                    0,
+                    4,
+                  ),
+                ),
+              ],
             ),
-            const SizedBox(
-              height: 10,
+            width: 60,
+            height: 60,
+            child: Icon(
+              icon,
+              color: textColor,
+              size: 30,
             ),
-            Text(
-              text,
-              style: const TextStyle(
-                color: textColor,
-                fontFamily: semibold,
-              ),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Text(
+            text,
+            style: const TextStyle(
+              color: textColor,
+              fontFamily: semibold,
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
